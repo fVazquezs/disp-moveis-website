@@ -1,258 +1,393 @@
  /* ----------------------------------------------- */
-/* Configurações Básicas */
-/* ----------------------------------------------- */
+ /* Configurações Básicas */
+ /* ----------------------------------------------- */
+ /*Zerando bordas para ter maior domínio sobre os box*/
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
 
-/*Zerando bordas para ter maior domínio sobre os box*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ html {
+   background-color: #fff;
+   /*Define a cor do fundo*/
+   color: #fff;
+   font-family: 'Lato', 'Arial', sans-serif;
+   /*a terceira opção é qualquer fonte daquela família, note que o nome da família não esta entre aspas.*/
+   font-weight: 300;
+   /*de acordo com a fonte que importamos*/
+   font-size: 20px;
+   text-rendering: optimizeLegibility;
+   /*otimiza a renderização da fonte para letura, tendo uma melhor qualidade*/
+ }
 
-html {
-    background-color: #fff; /*Define a cor do fundo*/
-    color: #fff;
-    font-family: 'Lato', 'Arial', sans-serif; /*a terceira opção é qualquer fonte daquela família, note que o nome da família não esta entre aspas.*/
-    font-weight: 300; /*de acordo com a fonte que importamos*/
-    font-size: 20px;
-    text-rendering: optimizeLegibility; /*otimiza a renderização da fonte para letura, tendo uma melhor qualidade*/
-}   
-
-/*Configurando minha linha do sistema de grid*/
-.row {
-   max-width: 1000px; /*Define o tamanho máximo da linha*/
-   margin: 0 auto 0 auto; /*Define que o container vai ficar centralizado*/
+ /*Configurando minha linha do sistema de grid*/
+ .row {
+   max-width: 1000px;
+   /*Define o tamanho máximo da linha*/
+   margin: 0 auto 0 auto;
+   /*Define que o container vai ficar centralizado*/
    /*margin: 0 auto; maneira alternativa para a linha de cima*/
+ }
+
+ header {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/NCS-Background2.jpg);
+   /*explore outras cores e transparências*/
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+ }
+
+ h1, h2, h3 {
+   font-weight: 300;
+   text-transform: uppercase;
+ }
+
+ h1 {
+   margin-top: 0;
+   margin-bottom: 20px;
+   color: #fff;
+   font-size: 240%;
+   word-spacing: 4px;
+   letter-spacing: 1px;
+ }
+
+ h2 {
+   font-size: 180%;
+   word-spacing: 2px;
+   text-align: center;
+   /*Centralizando o texto*/
+   margin-bottom: 30px;
+   letter-spacing: 1px;
+ }
+
+ h2:after {
+   display: block;
+   height: 2px;
+   background-color: #22a6b3;
+   content: " ";
+   /*Conteúdo do item*/
+   width: 100px;
+   /*Comprimento do item*/
+   margin: 0 auto;
+   /*Centralizar*/
+   margin-top: 30px;
+ }
+
+ h3 {
+   font-size: 110%;
+   margin-bottom: 15px;
+ }
+
+ .hero-text-box {
+   position: absolute;
+   width: 1140px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .btn {
+   display: inline-block;
+   padding: 10px 30px;
+   font-weight: 300;
+   text-decoration: none;
+   border-radius: 200px;
+   color: #fff;
+ }
+
+ .btn-full {
+   background-color: #22a6b3;
+   border: 1px solid #22a6b3;
+   color: #fff;
+ }
+
+ .btn-ghost {
+   border: 1px solid #22a6b3;
+   color: #22a6b3;
+ }
+
+ .btn:link,
+ .btn:visited {
+   display: inline-block;
+   padding: 10px 30px;
+   font-weight: 300;
+   text-decoration: none;
+   border-radius: 200px;
+   color: #fff;
+ }
+
+ .btn-full:link,
+ .btn-full:visited {
+   border: 1px solid #22a6b3;
+   color: #fff;
+   margin-right: 15px;
+   /*espaçamento entre os btões*/
+ }
+
+ .btn-ghost:link,
+ .btn-ghost:visited {
+   border: 1px solid #22a6b3;
+   color: #22a6b3;
+ }
+
+ .btn:hover,
+ .btn:active {
+   background-color: #7ed6df;
+ }
+
+ .btn-full:hover,
+ .btn-full:active {
+   border: 1px solid #7ed6df;
+ }
+
+ .btn-ghost:hover,
+ .btn-ghost:active {
+   border: 1px solid #7ed6df;
+   color: #fff;
+ }
+
+ .btn:link,
+ .btn:visited {
+   display: inline-block;
+   padding: 10px 30px;
+   font-weight: 300;
+   text-decoration: none;
+   border-radius: 200px;
+   color: #fff;
+   transition: background-color 0.2s, border 0.2s, color 0.2s;
+   /*a transição da cor do fundo, da borda e da fonte deve demorar 0.2 segundos*/
+ }
+
+ .logo {
+   height: 100px;
+   width: auto;
+   float: left;
+   margin-top: 20px;
+   /*colocar um espaçamento acima da logo para baixar ela*/
+ }
+
+ .main-nav {
+   float: right;
+   list-style: none;
+   /*Se livra dos bullets - bolinhas pretas - marcadores*/
+   margin-top: 55px;
+   /*colocar um espaçamento acima da lista para baixar ela*/
+ }
+
+ .main-nav li {
+   display: inline-block;
+   margin-left: 40px;
+   /*espaçamento entre os items da lista*/
+ }
+
+ .main-nav li a:link,
+ .main-nav li a:visited {
+   padding: 8px 0;
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 90%;
+   border-bottom: none;
+   transition: border-bottom 0.3s;
+ }
+
+ .main-nav li a:hover,
+ .main-nav li a:active {
+   border-bottom: 2px solid #7ed6df;
+ }
+
+ ion-icon {
+   font-size: 350%;
+   /*Tamanho do ícone*/
+   display: block;
+   color: #7ed6df;
+   /*cor da fonte = cor do ícone*/
+   margin-bottom: 10px;
+   /*espaço entre o ícone e o título do feature*/
+ }
+
+ .insta-btn {
+   font-size: 150%;
+   margin-bottom: 0px;
+   color: #fff;
+   display: none;
+ }
+
+ section {
+   padding: 80px 0;
+ }
+
+ .long-copy {
+   line-height: 145%;
+   width: 70%;
+   /*ocupa 70%, sobra 30%*/
+   margin-left: 15%;
+   /*15% para cada lado*/
+   color: grey;
+ }
+
+ .section-features .long-copy {
+   margin-bottom: 30px;
+ }
+
+ .box {
+   padding: 1%;
+   /*dá um pequeno espaçamento entre o conteúdo e o container.*/
+ }
+
+ .box p, h3, h2 {
+   /*talvez trocar para box h3*/
+   font-size: 90%;
+   line-height: 145%;
+   color: grey
+ }
+
+ .photo {
+   width: 100%;
+   margin: 0;
+   overflow: hidden;
+   background-color: #000;
+   /*Cor de fundo - preto*/
+ }
+
+ .photo img {
+   opacity: 0.7;
+   /*deixa a imagem um pouco transparente*/
+   width: 100%;
+   height: 242px;
+   /*para não desfigurar a imagem*/
+   transform: scale(1.15);
+   /*imagem aumentada em 15%*/
+   transition: transform 0.5s, opacity 0.5s;
+   /*Adiciona um período de transição quando alterado houver alteração da propriedade transform*/
+ }
+
+ .photo img:hover {
+   opacity: 1;
+   transform: scale(1.05);
+   /*escala da imagem com valor padrão*/
+ }
+
+ .images-showcase {
+   list-style: none;
+   /*Retira marcadores*/
+   width: 100%;
+   /*a lista agora ocupa toda largura da tela*/
+ }
+
+ .images-showcase li {
+   display: block;
+   /*permite outros elementos ao lado*/
+   float: left;
+   /*Faz com que os elementos sejam colocados lado a lado*/
+   width: 25%;
+   /*cada item da lista terá 25% de largura em relação a   tela... 100/4*/
+ }
+
+ .section-photos {
+   padding: 0;
+ }
+
+ /* ----------------------------------------------- */
+ /* Seção Lista de Passos (Section Steps) */
+ /* ----------------------------------------------- */
+ /*Definindo cor de fundo para essa seção*/
+ .section-steps {
+   background-color: #f4f4f4;
+ }
+
+ .steps-box {
+   margin-top: 30px;
+   text-align: center;
+   /*textos ou conteúdos do tipo inline (ex. img) alinhados à direita*/
+   color:grey;
+ }
+
+ /*Definindo o tamanho da imagem do container da esquerda*/
+ .app-screen {
+   width: 40%;
+   /*40% do tamanho do box/container*/
+ }
+
+ .step {
+   margin-bottom: 50px;
+ }
+
+ /*Vamos criar uma regra para o elemento div dentro da classe step*/
+ .step div {
+   color: #7ed6df;
+   /*Define cor da fonte*/
+   border: 2px solid #7ed6df;
+   /*define uma borda laranja*/
+   display: inline-block;
+   /*para permitir containers lado a lado*/
+   border-radius: 50%;
+   /*Arredonda as bordas*/
+   height: 55px;
+   /*Define altura*/
+   width: 55px;
+   /*Mesmo valor da altura, afinal queremos um circulo*/
+   /*Ajustando o texto interno*/
+   text-align: center;
+   /*Texto centralizado na horizontal, não na vertical*/
+   padding: 5px;
+   /*espaço entre texto e borda do container*/
+   float: left;
+   font-size: 150%;
+   margin-right: 30px;
+   /*espaço entre essa div e o paragráfo - talvez varie de acordo com o tamanho dos paragráfos*/
+ }
+
+ .step:last-of-type {
+   margin-bottom: 80px;
+ }
+
+ .btn-app img {
+   height: 50px;
+   width: auto;
+   margin-right: 10px;
+ }
+
+ .clearfix {
+   zoom: 1;
+ }
+
+ /*limpa o float depois de um elemento.*/
+ .clearfix:after {
+   content: '.';
+   clear: both;
+   display: block;
+   height: 0;
+   visibility: hidden;
+ }
+
+/*CSS para o section-cities*/
+
+.section-cities {
+  color: grey;
 }
 
-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/NCS-Background2.jpg); /*explore outras cores e transparências*/
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-
-h1, h2, h3 {
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
-h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 240%;
-    word-spacing: 4px;
-    letter-spacing: 1px;
-}
-
-h2 {
-    font-size: 180%;
-    word-spacing: 2px;
-    text-align: center; /*Centralizando o texto*/
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-h2:after {
-    display: block;
-    height: 2px;
-    background-color: #22a6b3;
-    content: " "; /*Conteúdo do item*/
-    width: 100px; /*Comprimento do item*/
-    margin: 0 auto; /*Centralizar*/
-    margin-top: 30px;
-}
-
-h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
-}
-
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.btn{
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    color: #fff;
-}
-
-.btn-full{
-    background-color: #22a6b3;
-    border: 1px solid #22a6b3;
-    color: #fff;
-}
-
-.btn-ghost {
-    border: 1px solid #22a6b3;
-    color: #22a6b3;
-}
-
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    color: #fff;
-}
-
-.btn-full:link,
-.btn-full:visited  {
-    border: 1px solid #22a6b3;
-    color: #fff;
-    margin-right: 15px; /*espaçamento entre os btões*/
-}
-
-.btn-ghost:link,
-.btn-ghost:visited  {
-    border: 1px solid #22a6b3;
-    color: #22a6b3;
-}
-
-.btn:hover,
-.btn:active {
-    background-color: #7ed6df;
-}
-
-.btn-full:hover,
-.btn-full:active {
-    border: 1px solid #7ed6df;
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-    border: 1px solid #7ed6df;
-    color: #fff;
-}
-
-.btn:link,
-.btn:visited {
-    display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    color: #fff;
-    transition: background-color 0.2s, border 0.2s, color 0.2s; /*a transição da cor do fundo, da borda e da fonte deve demorar 0.2 segundos*/
-}
-
-.logo {
-    height: 100px;
-    width: auto;
-    float: left;
-    margin-top: 20px; /*colocar um espaçamento acima da logo para baixar ela*/
-}
-
-.main-nav {
-    float: right;
-    list-style: none; /*Se livra dos bullets - bolinhas pretas - marcadores*/
-    margin-top: 55px; /*colocar um espaçamento acima da lista para baixar ela*/
-}
-
-.main-nav li {
-    display: inline-block;
-    margin-left: 40px; /*espaçamento entre os items da lista*/
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-    padding: 8px 0;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%;
-    border-bottom: none;
-    transition:  border-bottom 0.3s; 
-}
-
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #7ed6df;
-}
-
-
-
-ion-icon {
-    font-size: 350%; /*Tamanho do ícone*/
-    display: block;
-    color: #7ed6df; /*cor da fonte = cor do ícone*/
-    margin-bottom: 10px; /*espaço entre o ícone e o título do feature*/
-}
-
-.insta-btn{
-    font-size: 150%;
-    margin-bottom: 0px;
-    color: #fff;
-    display: none;
-}
-
-section {
-    padding: 80px 0;
-}
-
-.long-copy {
-   line-height:145%;
-   width: 70%; /*ocupa 70%, sobra 30%*/
-   margin-left: 15%; /*15% para cada lado*/
-   color: black;
-}
-
-.section-features .long-copy {
-    margin-bottom: 30px;
-}
-
-.box {
-    padding: 1%; /*dá um pequeno espaçamento entre o conteúdo e o container.*/
-}
-
-.box p, h3, h2 { /*talvez trocar para box h3*/
-    font-size: 90%;
-    line-height: 145%;
-    color: black
-}
-
-.photo {
+.section-cities img {
     width: 100%;
-    margin: 0;
-    overflow: hidden;
-    background-color: #000; /*Cor de fundo - preto*/
 }
 
-.photo img {
-    opacity: 0.7; /*deixa a imagem um pouco transparente*/
-    width: 100%;
-    height: 242px; /*para não desfigurar a imagem*/
-    transform: scale(1.15); /*imagem aumentada em 15%*/
-    transition: transform 0.5s, opacity 0.5s; /*Adiciona um período de transição quando alterado houver alteração da propriedade transform*/
+.section-cities ion-icon {
+  float: left;
+  font-size: 120%;
+  /*Tamanho do ícone*/
+  display: block;
+  color: #7ed6df;
+  /*cor da fonte = cor do ícone*/
+  margin-bottom: 10px;
+  /*espaço entre o ícone e o título do feature*/
+  margin-right: 5px;
 }
 
-.photo img:hover {
-    opacity: 1;
-    transform: scale(1.05); /*escala da imagem com valor padrão*/
+.city-feature{
+  float: left;
 }
 
-.images-showcase {
-    list-style: none; /*Retira marcadores*/
-    width: 100%; /*a lista agora ocupa toda largura da tela*/
-}
-
-.images-showcase li{
-    display: block; /*permite outros elementos ao lado*/
-    float: left; /*Faz com que os elementos sejam colocados lado a lado*/
-    width: 25%; /*cada item da lista terá 25% de largura em relação a   tela... 100/4*/
-}
-
-.section-photos {
-    padding: 0;
+.city-feature a{
+  text-decoration: none;
 }
