@@ -21,7 +21,7 @@
    /*otimiza a renderização da fonte para letura, tendo uma melhor qualidade*/
 
    height: 100vh;
-    overflow: hidden;
+   overflow: hidden;
  }
 
  body {
@@ -58,7 +58,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/NCS-Background2.jpg);
     background-size: cover;
     transform-origin: center center 0;
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-2px) scale(4);
     z-index: -1;
     min-height: 100vh;
   }
@@ -244,7 +244,8 @@
   padding: 80px 0;
   background-color: #fff;
   position: relative;
-  z-index: 2; }
+  z-index: 1; 
+}
 
  .long-copy {
    line-height: 145%;
@@ -394,7 +395,17 @@
 
 .section-cities {
   color: grey;
-}
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+} 
+
+/* .section-cities > .row {
+  position: inherit;
+  color: grey;
+  background-color: #fff;
+  z-index: 2;
+} */
 
 .section-cities img {
     width: 100%;
@@ -426,11 +437,31 @@
 
 /*Adicionando imagem de fundo na seção*/
 .section-testimonials {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/testemonials.jpg);
-  background-size: cover; /*preencher toda a largura da janela do navegador*/
-  color: #fff;
-  background-attachment: fixed;
+  background-size: cover;  
+  background-color: transparent;
+  height: 100vh;
+  transform-style: inherit;
+  width: 100vw;
 }
+
+
+.section-testimonials::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  /* background-color: #8a8; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/testemonials.jpg);
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -2;
+  min-height: 100%;
+}
+
 
 blockquote {
     padding: 2%;
@@ -456,16 +487,22 @@ cite img {
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
+
+  
 }
+
 
 /* ----------------------------------------------- */
 /* Seção Rodapé (Footer) */
 /* ----------------------------------------------- */
 
 footer {
+  position: relative;
+  z-index: 3;
   background-color: #333;
   padding: 50px;
   font-size: 80%;
+  margin: 0px;
 }
 
 .footer-nav {
