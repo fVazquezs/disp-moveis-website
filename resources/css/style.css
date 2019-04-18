@@ -324,6 +324,7 @@
  /*Definindo cor de fundo para essa seção*/
  .section-steps {
    background-color: #f4f4f4;
+   z-index: 2;
  }
 
  .steps-box {
@@ -399,13 +400,6 @@
   position: relative;
   z-index: 2;
 } 
-
-/* .section-cities > .row {
-  position: inherit;
-  color: grey;
-  background-color: #fff;
-  z-index: 2;
-} */
 
 .section-cities img {
     width: 100%;
