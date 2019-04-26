@@ -351,7 +351,7 @@
  }
 
  /*Vamos criar uma regra para o elemento div dentro da classe step*/
- .step div {
+ .step-number {
    color: #7ed6df;
    /*Define cor da fonte*/
    border: 2px solid #7ed6df;
@@ -369,8 +369,12 @@
    /*Texto centralizado na horizontal, não na vertical*/
    padding: 5px;
    font-size: 150%;
-   margin-right: 30px;
    /*espaço entre essa div e o paragráfo - talvez varie de acordo com o tamanho dos paragráfos*/
+ }
+
+ .step-content {
+  float: right;
+  width: 84%;
  }
 
  .step:last-of-type {
