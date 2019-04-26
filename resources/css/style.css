@@ -223,7 +223,7 @@
    border-bottom: 2px solid #7ed6df;
  }
 
- ion-icon {
+ ion-icon, .section-features svg  {
    font-size: 350%;
    /*Tamanho do ícone*/
    display: block;
@@ -255,6 +255,14 @@
 
  .section-features h2 {
   color: grey;
+}
+
+.section-features p {
+  text-align: justify;
+}
+
+.section-features svg {
+  color: #7ed6df;
 }
 
  .box {
