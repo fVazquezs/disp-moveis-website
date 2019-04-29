@@ -19,8 +19,7 @@
   <header>
     <nav>
       <div class="row">
-        <img src="resources/img/LogoNutricaoIntegrativaPOA-fdotransparente.png" alt="nutrição integrativa logo"
-          class="logo">
+        <img src="resources/img/LogoNutIntegrativa.png" alt="nutrição integrativa logo" class="logo">
         <ul class="main-nav">
           <li><a href="#">O que é ayurveda</a></li>
           <li><a href="#">Alguns mitos</a></li>
@@ -30,8 +29,8 @@
     </nav>
     <div class="hero-text-box">
       <h1>Ayurveda é além da refeição,<br>É o seu dia a dia.</h1>
-      <a class="btn btn-full" href="#">Clientes</a>
-      <a class="btn btn-ghost" href="#">Consulta</a>
+      <a class="btn btn-full" href="#clientes">Clientes</a>
+      <a class="btn btn-ghost" href="#consulta">Consulta</a>
     </div>
   </header>
   <section class="section-features">
@@ -51,7 +50,7 @@
         intelecto que são sustentados pelo que digerimos.
       </p>
     </div>
-    <div class="row">
+    <div id="consulta" class="row">
       <div class="col span-1-of-5 box">
         <i class="fas fa-user"></i>
         <h3>Acompanhamento Individual</h3>
@@ -233,7 +232,7 @@
       <!-- Aqui irá o título da primeira div -->
       <h2>Melhorando a qualidade de vida das pessoas</h2>
     </div>
-    <div class="row">
+    <div id="clientes" class="row">
       <!-- Aqui irá o conteúdo da segunda div, organizado em 3 colunas -->
       <div class="col span-1-of-3">
         <!--Primeira coluna -->
@@ -289,16 +288,33 @@
       </div>
       <div class="col span-1-of-2">
         <!-- Aqui irá nosso menu de navegação de redes sociais -->
+        <!-- TODO arrumar css do insta -->
         <ul class="social-links">
           <li><a href="https://www.instagram.com/ayurvedanutri/" target="blank">
-              <ion-icon class="logo-instagram" name="logo-instagram"></ion-icon>
+            <i class="fab fa-instagram"></i>
             </a></li>
       </div>
     </div>
   </footer>
+
+  <script type="text/javascript">
+      window.onscroll = function () { console.log('scrol') };
+
+    var navbar = document.getElementsByTagName("NAV");
+    var sticky = navbar.offsetTop;
+
+    console.log('function');
+    function myFunction() {
+      console.log('this is the scroll',navbar);
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
 </body>
 
 </html>
-<script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
   integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>

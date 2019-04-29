@@ -223,7 +223,40 @@
    border-bottom: 2px solid #7ed6df;
  }
 
- ion-icon, .section-features svg  {
+ /* nav {
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+} */
+
+ .section-features svg  {
    font-size: 350%;
    /*Tamanho do ícone*/
    display: block;
