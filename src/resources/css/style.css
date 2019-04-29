@@ -417,7 +417,7 @@
     width: 100%;
 }
 
-.section-cities ion-icon {
+.section-cities .street-view {
   float: left;
   font-size: 120%;
   /*Tamanho do ícone*/
