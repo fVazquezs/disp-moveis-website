@@ -7,6 +7,7 @@
   <!-- Importação do sistema de grid -->
   <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
   <!-- Importação do nossa folha de estilo -->
+  <link rel="stylesheet" type="text/css" href="resources/css/mediaquery.css">
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <!-- Importação da fonte Lato -->
   <link href="https://fonts.googleapis.com/css?family=Artifika|Lato:100,300,300i,400&amp;subset=latin-ext"
@@ -21,10 +22,13 @@
       <div class="row">
         <img src="resources/img/LogoNutIntegrativa.png" alt="nutrição integrativa logo" class="logo">
         <ul class="main-nav">
-          <li><a href="#">O que é ayurveda</a></li>
-          <li><a href="#">Alguns mitos</a></li>
-          <li><a href="#">Quem sou eu</a></li>
+          <li><a href="#o-que-e">O que é ayurveda</a></li>
+          <li><a href="#consulta">Consultas</a></li>
+          <li><a href="#passos">Comece Agora</a></li>
         </ul>
+
+        <i class="fas fa-bars"></i>
+        <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
       </div>
     </nav>
     <div class="hero-text-box">
@@ -33,7 +37,7 @@
       <a class="btn btn-ghost" href="#consulta">Consulta</a>
     </div>
   </header>
-  <section class="section-features">
+  <section id="o-que-e" class="section-features js--section-features">
     <div class="row">
       <h2>Nutrição e Ayurveda</h2>
       <p class="long-copy">
@@ -64,6 +68,13 @@
           olhar para a realidade vivida, meio familiar, social e ambiental.</p>
       </div>
       <div class="col span-1-of-5 box">
+        <i class="fas fa-utensil-spoon"></i>
+        <h3>Aprenda a cozinhar</h3>
+        <p>Orientação nutricional na prática ocorre através de vivência na cozinha com o desenvolvimento de técnicas
+          para cozinhar, conservar, armazenar, higienizar, organizar o tempo e outras atribuições necessárias para a
+          elaboração de refeições saudáveis.</p>
+      </div>
+      <div class="col span-1-of-5 box">
         <i class="fas fa-baby"></i>
         <h3>Introdução Alimentar em Bebês</h3>
         <p>Orientação sobre como realizar a transição do aleitamento materno para a alimentação, com apoio nas escolhas
@@ -74,13 +85,6 @@
         <h3>Atendimento Familiar</h3>
         <p>Com objetivo de criar hábitos saudáveis em relação à alimentação para todos que convivem, o acompanhamento
           leva em consideração a individualidade de cada um e a harmonia do coletivo.</p>
-      </div>
-      <div class="col span-1-of-5 box">
-        <i class="fas fa-users"></i>
-        <h3>Aprenda a cozinhar</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusamus ut deleniti nulla adipisci cum,
-          totam odit in fugiat impedit nesciunt explicabo, rerum sapiente voluptate? Neque nobis reiciendis delectus
-          quibusdam?</p>
       </div>
     </div>
   </section>
@@ -130,7 +134,7 @@
       </li>
     </ul>
   </section>
-  <section class="section-steps">
+  <section id="passos" class="section-steps">
     <!--Container com o título da seção -->
     <div class="row">
       <h2>Apenas 10 passos para começar uma alimentação saúdavel</h2>
@@ -206,7 +210,7 @@
       <div class="row">
         <!-- Aqui irá o conteúdo da segunda div ROW, organizado em 4 colunas -->
         <div class="col span-1-of-2 box">
-          <img src="resources/img/rio.jpg" alt="Rio de Janeiro" />
+          <img src="resources/img/porto_alegre.jpg" alt="Porto Alegre" />
           <h3>Porto Alegre</h3>
           <div class="city-feature">
             <div class="street-view"><i class="fas fa-street-view"></i></div>
@@ -215,8 +219,8 @@
         </div>
         <div class="col span-1-of-2 box">
 
-          <img src="resources/img/rio.jpg" alt="Rio de Janeiro" />
-          <h3>Canoas</h3>
+          <img src="resources/img/lacador.jpg" alt="Grande Porto Alegre" />
+          <h3>Grande Porto Alegre</h3>
           <div class="city-feature">
             <div class="street-view"><i class="fas fa-street-view"></i></div>
             Atendimento domiciliar
@@ -248,23 +252,22 @@
       <div class="col span-1-of-3">
         <!--Segunda coluna -->
         <blockquote>
-          &emsp;Comida saúdavel rapidinho na porta da sua casa! A melhor opção para mim e para vc...
-          principalmente para mim que odeio cozinhar e que já perdi três casas após incendia-las
-          tentando cozinhar.
+          &emsp;A orientação nutricional foi extremamente importante para auxiliar no meu treinamento físico. Ela
+          proporcionou condições para o nível intenso de atividades que eu estava realizando, além de me fazer sentir
+          mais disposta e mais saudável para cada dia de trabalho e exercício.
           <cite>
-            <img src="https://api.adorable.io/avatars/40/silva@adorable.png" alt="Joicelaine Carneiro">Joicelaine
-            Carneiro
+            <img src="https://api.adorable.io/avatars/40/silva@adorable.png" alt="Sybelle">Sybelle
           </cite>
         </blockquote>
       </div>
       <div class="col span-1-of-3">
         <!--Terceira coluna -->
         <blockquote>
-          &emsp;Eu estava procurando por uma alimentação saudável e que coubesse no meu bolso e encontrei...
-          Saúde no Prato, melhor custo-benefício ever! Muito mais que alvace, eles tem rúcula e
-          repolho também!
+          &emsp;Ao entrar em contato com Ayurveda e a partir dela prestar atenção em meu corpo e mente, percebi que suas
+          orientações fazem muito sentido. O significado da Ayurveda, pra mim, é descobrir e dar ao corpo o que ele
+          precisa. É a obtenção de mais saúde pelo auto-conhecimento e auto-cuidado.
           <cite>
-            <img src="https://api.adorable.io/avatars/40/abott@adorable.png" alt="Pedro antunes"> Pedro Antunes
+            <img src="https://api.adorable.io/avatars/40/abott@adorable.png" alt="Suzana"> Suzana
           </cite>
         </blockquote>
       </div>
@@ -291,30 +294,15 @@
         <!-- TODO arrumar css do insta -->
         <ul class="social-links">
           <li><a href="https://www.instagram.com/ayurvedanutri/" target="blank">
-            <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a></li>
       </div>
     </div>
   </footer>
-
-  <script type="text/javascript">
-      window.onscroll = function () { console.log('scrol') };
-
-    var navbar = document.getElementsByTagName("NAV");
-    var sticky = navbar.offsetTop;
-
-    console.log('function');
-    function myFunction() {
-      console.log('this is the scroll',navbar);
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-  </script>
 </body>
 
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
   integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+<script src="./resources/js/script.js"></script>

@@ -1,0 +1,39 @@
+@media only screen and (max-width: 767px) {
+    /*Seletores criados anteriormente ou já existentes*/
+    /*Comentar a seguinte regra desta media query*/
+    .main-nav {
+        /*Não mostra o conteúdo html deste seletor*/
+        display: none;
+    }
+    /*Mostra o menu responsivo, que antes estava escondido/oculto*/
+    .mobile-nav-icon {
+        display: inline-block;
+    }
+    .main-nav {
+        float: left;
+    }
+    .main-nav li {
+        /*um item por linha*/
+        display: block;
+    }
+    .main-nav li a:visited, .main-nav li a:link {
+        /*um item por linha*/
+        display: block;
+        border: 0;
+    }
+
+    .sticky .main-nav { margin-top: 10px; }
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0;
+    }
+  
+    .sticky .mobile-nav-icon i {
+      margin-top: 10px;
+    }
+  
+    .sticky .mobile-nav-icon i {
+      color: #555;
+    }
+}
