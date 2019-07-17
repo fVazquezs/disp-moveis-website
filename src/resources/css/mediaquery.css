@@ -1,37 +1,38 @@
 @media only screen and (max-width: 767px) {
-    /*Seletores criados anteriormente ou já existentes*/
-    /*Comentar a seguinte regra desta media query*/
-    .main-nav {
-        /*Não mostra o conteúdo html deste seletor*/
-        display: none;
+    html {
+        font-size: 16px !important;
     }
-    /*Mostra o menu responsivo, que antes estava escondido/oculto*/
+    .logo {
+        height: 70px !important;
+        margin-top: 30px !important;
+    }
     .mobile-nav-icon {
-        display: inline-block;
+        display: inline-block !important;
+        font-size: 200% !important;
+        color: #ffffff !important;
+        margin-right: 30px !important;
     }
     .main-nav {
-        float: left;
+        float: left !important;
     }
     .main-nav li {
-        /*um item por linha*/
-        display: block;
+        display: block !important;
     }
     .main-nav li a:visited, .main-nav li a:link {
-        /*um item por linha*/
-        display: block;
-        border: 0;
+        display: block !important;
+        border: 0 !important;
     }
     .sticky .main-nav {
-        margin-top: 10px;
+        margin-top: 10px !important;
     }
     .sticky .main-nav li a:link, .sticky .main-nav li a:visited {
-        padding: 10px 0;
+        padding: 10px 0 !important;
     }
     .sticky .mobile-nav-icon i {
-        margin-top: 10px;
+        margin-top: 10px !important;
     }
     .sticky .mobile-nav-icon i {
-        color: #555;
+        color: #555 !important;
     }
 }
 
@@ -44,21 +45,24 @@
     }
 }
 
+@media only screen and (max-width: 1100px){
+    .main-nav{
+        float: left !important;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .hero-text-box {
         width: 800px !important;
         margin-left: 10px;
     }
-
-    .testemonials{
+    .testemonials {
         grid-template-columns: 100% !important;
     }
-
-    .testemonials>div{
+    .testemonials>div {
         margin: 0 10px 30px 10px;
     }
-
-    cite{
+    cite {
         margin-top: 5px !important;
     }
 }
@@ -68,7 +72,7 @@
         grid-template-columns: 100% !important;
         margin-right: 20px !important;
     }
-    .types>.box{
+    .types>.box {
         margin-bottom: 20px !important;
     }
 }
@@ -88,7 +92,7 @@
 
 @media only screen and (max-width: 700px) {
     .steps {
-      grid-template-columns: 100% !important;
+        grid-template-columns: 100% !important;
     }
 }
 
@@ -106,7 +110,7 @@
         width: 80% !important;
         margin-left: 10% !important;
         color: grey;
-    }    
+    }
     .section-photos {
         grid-template-columns: 100% !important;
     }
@@ -118,7 +122,7 @@
         width: 300px !important;
         margin-left: 5px;
     }
-    .step>.step-content{
+    .step>.step-content {
         font-size: 90%;
     }
     .step-number {
@@ -126,5 +130,5 @@
         width: 45px !important;
         padding: 2px 5px 5px 5px !important;
         font-size: 130%;
-      }
+    }
 }

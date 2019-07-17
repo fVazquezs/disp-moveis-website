@@ -1,14 +1,27 @@
-$(document).onLoad(function () {
-    $('').waypoint(function (direction) {
-        console.log('qay')
-        if (direction == "down") {
-            $('nav').addClass('sticky');
+$(document).ready(function () {
+    var oQueE = $('.js--section-features').offset();
+
+
+   
+    // funcoes do menu responsivo
+    $('.js--mobile-nav-icon').click(function () {
+        var nav = $('.js--main-nav');
+        var icon = $('.js--mobile-toggle-icon');
+
+        nav.slideToggle(200);
+
+        if (icon.hasClass('fa-bars')) {
+            icon.addClass('fa-times');
+            icon.removeClass('fa-bars');
         } else {
-            $('nav').removeClass('sticky');
+            icon.addClass('fa-bars');
+            icon.removeClass('fa-times');
         }
+    })
 
-    }, {
-            offset: '60px;'
-        });
+
+
+    window.onscroll = function () {
+        console.log("oQueE")
+    }
 });
-

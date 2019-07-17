@@ -527,7 +527,7 @@
 
  .testemonials {
    display: grid;
-   grid-template-columns: 0 33% 33% 33%;
+   grid-template-columns: 0 50% 50%;
  }
 
  .section-testimonials {

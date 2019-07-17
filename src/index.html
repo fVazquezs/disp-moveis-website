@@ -3,14 +3,10 @@
 
 <head>
   <meta content='width=device-width, initial-scale=1' name='viewport' />
-  <!-- Importação do normalize css para arrumar bugs -->
   <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-  <!-- Importação do sistema de grid -->
   <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-  <!-- Importação do nossa folha de estilo -->
   <link rel="stylesheet" type="text/css" href="resources/css/mediaquery.css">
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-  <!-- Importação da fonte Lato -->
   <link href="https://fonts.googleapis.com/css?family=Artifika|Lato:100,300,300i,400&amp;subset=latin-ext"
     rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="vendors/favicon/apple-touch-icon.png">
@@ -30,14 +26,15 @@
     <nav>
       <div class="row">
         <img src="resources/img/LogoNutIntegrativa.png" alt="nutrição integrativa logo" class="logo">
-        <ul class="main-nav">
+        <ul class="main-nav js--main-nav">
           <li><a href="#o-que-e">O que é ayurveda</a></li>
           <li><a href="#consulta">Consultas</a></li>
           <li><a href="#passos">Comece Agora</a></li>
         </ul>
 
-        <i class="fas fa-bars"></i>
-        <a class="mobile-nav-icon"><i class="ion-navicon-round"></i></a>
+        <a class="mobile-nav-icon js--mobile-nav-icon">
+          <i class="fas fa-times js--mobile-toggle-icon"></i>
+        </a>
       </div>
     </nav>
     <div class="hero-text-box">
@@ -124,18 +121,15 @@
     </figure>
   </section>
   <section id="passos" class="section-steps">
-    <!--Container com o título da seção -->
     <div class="row">
       <h2>Apenas 10 passos para começar uma alimentação saúdavel</h2>
     </div>
-
     <div class="steps">
       <div class="step">
         <div class="step-number">1</div>
         <div class="step-content">Fazer a base da sua alimentação de alimentos in natura ou minimamente processados
         </div>
       </div>
-
       <div class="step">
         <div class="step-number">2</div>
         <div class="step-content">Utilizar óleos, gordura, sal e açúcar em pequenas quantidades ao temperar e cozinhar
@@ -145,7 +139,6 @@
         <div class="step-number">3</div>
         <div class="step-content">Limitar o consumo de alimentos processados</div>
       </div>
-
       <div class="step">
         <div class="step-number">4</div>
         <div class="step-content">Evitar o consumo de alimentos ultraprocessados</div>
@@ -180,7 +173,6 @@
           comerciais</div>
       </div>
   </section>
-
   <section class="section-cities">
     <div class="row">
       <h2>Atendimento nas seguintes cidades</h2>
@@ -207,27 +199,12 @@
     </div>
     </div>
   </section>
-  <!--Abrindo a seção testemunhos -->
   <section class="section-testimonials">
     <div class="row">
-      <!-- Aqui irá o título da primeira div -->
       <h2>Melhorando a qualidade de vida das pessoas</h2>
     </div>
     <div id="clientes" class="row testemonials">
-      <!-- Aqui irá o conteúdo da segunda div, organizado em 3 colunas -->
       <div>
-        <!--Primeira coluna -->
-        <blockquote>
-          &emsp;Saúde no prato é incrível! Eu sou uma pessoa super ocupada, com pouco tempo para cuidar da
-          minha alimentação, mas tudo mudou com a equipe da saúde no prato que assumiu essa função.
-          <cite>
-            <img src="https://api.adorable.io/avatars/40/vazquez@adorable.png" alt="Alberto Saltonetto"> Alberto
-            Saltonetto
-          </cite>
-        </blockquote>
-      </div>
-      <div>
-        <!--Segunda coluna -->
         <blockquote>
           &emsp;A orientação nutricional foi extremamente importante para auxiliar no meu treinamento físico. Ela
           proporcionou condições para o nível intenso de atividades que eu estava realizando, além de me fazer sentir
@@ -238,7 +215,6 @@
         </blockquote>
       </div>
       <div>
-        <!--Terceira coluna -->
         <blockquote>
           &emsp;Ao entrar em contato com Ayurveda e a partir dela prestar atenção em meu corpo e mente, percebi que suas
           orientações fazem muito sentido. O significado da Ayurveda, pra mim, é descobrir e dar ao corpo o que ele
@@ -249,9 +225,7 @@
         </blockquote>
       </div>
     </div>
-    <!--Fechando a seção testemunhos -->
   </section>
-
   <footer>
     <div class="footer">
       <div>
@@ -266,8 +240,13 @@
   </footer>
 </body>
 
-</html>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="vendors/js/jquery.waypoints.min.js"></script>
+
+<script src="resources/js/script.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
   integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
-<script src="./resources/js/script.js"></script>
+
+</html>
