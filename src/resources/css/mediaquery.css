@@ -21,19 +21,110 @@
         display: block;
         border: 0;
     }
-
-    .sticky .main-nav { margin-top: 10px; }
-
-    .sticky .main-nav li a:link,
-    .sticky .main-nav li a:visited {
+    .sticky .main-nav {
+        margin-top: 10px;
+    }
+    .sticky .main-nav li a:link, .sticky .main-nav li a:visited {
         padding: 10px 0;
     }
-  
     .sticky .mobile-nav-icon i {
-      margin-top: 10px;
+        margin-top: 10px;
     }
-  
     .sticky .mobile-nav-icon i {
-      color: #555;
+        color: #555;
     }
+}
+
+@media only screen and (max-width: 1200px) {
+    .logo {
+        margin-left: 20px;
+    }
+    .hero-text-box {
+        width: 1000px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero-text-box {
+        width: 800px !important;
+        margin-left: 10px;
+    }
+
+    .testemonials{
+        grid-template-columns: 100% !important;
+    }
+
+    .testemonials>div{
+        margin: 0 10px 30px 10px;
+    }
+
+    cite{
+        margin-top: 5px !important;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .types {
+        grid-template-columns: 100% !important;
+        margin-right: 20px !important;
+    }
+    .types>.box{
+        margin-bottom: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .section-photos {
+        grid-template-columns: 50% 50% !important;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .hero-text-box {
+        width: 600px !important;
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .steps {
+      grid-template-columns: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero-text-box {
+        font-size: 70%;
+        width: 400px !important;
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .long-copy {
+        line-height: 145%;
+        width: 80% !important;
+        margin-left: 10% !important;
+        color: grey;
+    }    
+    .section-photos {
+        grid-template-columns: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .hero-text-box {
+        font-size: 70%;
+        width: 300px !important;
+        margin-left: 5px;
+    }
+    .step>.step-content{
+        font-size: 90%;
+    }
+    .step-number {
+        height: 45px !important;
+        width: 45px !important;
+        padding: 2px 5px 5px 5px !important;
+        font-size: 130%;
+      }
 }
