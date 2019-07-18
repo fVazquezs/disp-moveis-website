@@ -156,4 +156,19 @@
         padding: 2px 5px 5px 5px !important;
         font-size: 130%;
     }
+    .main-nav{
+        margin-left: 10px !important;
+        float: left !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .main-nav{
+        margin-left: 0px !important;
+        float: left !important;
+    }
+
+    .main-nav li {
+        margin-left: 10px !important;
+    }
 }
