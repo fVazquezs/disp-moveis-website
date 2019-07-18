@@ -16,15 +16,11 @@
  html {
    scroll-behavior: smooth;
    background-color: #fff;
-   /*Define a cor do fundo*/
    color: #fff;
    font-family: 'Lato', 'Arial', sans-serif;
-   /*a terceira opção é qualquer fonte daquela família, note que o nome da família não esta entre aspas.*/
    font-weight: 300;
-   /*de acordo com a fonte que importamos*/
    font-size: 20px;
    text-rendering: optimizeLegibility;
-   /*otimiza a renderização da fonte para letura, tendo uma melhor qualidade*/
    height: 100vh;
    overflow: hidden;
  }
@@ -38,8 +34,6 @@
    overflow-y: scroll;
    overflow-x: hidden;
  }
-
- /*Configurando minha linha do sistema de grid*/
 
  .row {
    max-width: 1000px;
@@ -200,6 +194,10 @@
    /*colocar um espaçamento acima da logo para baixar ela*/
  }
 
+ .logo-link {
+   padding: 0px !important;
+ }
+
  .main-nav {
    float: right;
    list-style: none;
@@ -251,6 +249,20 @@
    padding: 16px;
  }
 
+ .sticky {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.95);
+   box-shadow: 0 2px 2px #efefef;
+   z-index: 999999 !important;
+ }
+
+ .sticky+.content {
+   padding-top: 60px;
+ }
+
  .sticky .main-nav li a:link, .sticky .main-nav li a:visited {
    padding: 8px 0;
    color: #555;
@@ -271,20 +283,6 @@
  .sticky .main-nav li a:link, .sticky .main-nav li a:visited {
    padding: 16px 0;
    color: #555;
- }
-
- .sticky {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   background-color: rgba(255, 255, 255, 0.95);
-   box-shadow: 0 2px 2px #efefef;
-   z-index: 9999;
- }
-
- .sticky+.content {
-   padding-top: 60px;
  }
 
  .section-features svg {
@@ -589,7 +587,7 @@
 
  .footer {
    display: grid;
-   grid-template-columns: 80% 20%;
+   grid-template-columns: 70% 30%;
  }
 
  .footer-nav {
@@ -626,15 +624,20 @@
    font-size: 50%;
  }
 
- .fa-instagram {
+ .fa-instagram, .fa-envelope {
    font-size: 250%;
    color: #888;
    transition: color 0.2s;
+   margin-left: 5px;
  }
 
- .fa-instagram:hover {
-   color: #f442ce;
- }
+ .fa-envelope:hover {
+  color: #346ec9;
+}
+
+.fa-instagram:hover {
+  color: #f442ce;
+}
 
  footer p {
    color: #888;

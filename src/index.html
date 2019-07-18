@@ -2,6 +2,10 @@
 <html lang="pt-br">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Site de nutricionista ayurvedica">
+  <meta name="keywords" content="ayurveda, nutricionista, porto alegre, ayurvedica, natural">
+  <meta name="author" content="Fernando Vázquez">
   <meta content='width=device-width, initial-scale=1' name='viewport' />
   <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
@@ -22,10 +26,12 @@
 </head>
 
 <body>
-  <header>
-    <nav class="">
+  <header id="header">
+    <nav class="sticky">
       <div class="row">
-        <img src="resources/img/LogoNutIntegrativa.png" alt="nutrição integrativa logo" class="logo">
+        <a class="logo-link" href="#header">
+          <img src="resources/img/LogoNutIntegrativa.png" alt="nutrição integrativa logo" class="logo">
+        </a>
         <ul class="main-nav js--main-nav">
           <li><a href="#o-que-e">O que é ayurveda</a></li>
           <li><a href="#consulta">Consultas</a></li>
@@ -232,6 +238,9 @@
         Maria Gabriela Vázquez - Nutricionista Ayurvedica
       </div>
       <div>
+        <a href="mailto: marianutintegr@gmail.com" target="blank">
+          <i class="fas fa-envelope"></i>
+        </a>
         <a href="https://www.instagram.com/ayurvedanutri/" target="blank">
           <i class="fab fa-instagram"></i>
         </a>
@@ -239,9 +248,15 @@
     </div>
   </footer>
 </body>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+
+  $('#o-que-e').scroll(function () {
+    console.log('scrolling')
+  });
+</script>
+
 
 <script src="vendors/js/jquery.waypoints.min.js"></script>
 
