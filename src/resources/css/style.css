@@ -257,7 +257,7 @@
  }
 
  .sticky .main-nav {
-   margin-top: 18px;
+   margin-top: 10px;
    /*colocar um espaçamento acima da lista para baixar ela*/
  }
 
@@ -265,7 +265,7 @@
    height: 50px;
    width: auto;
    float: left;
-   margin: 5px 0;
+   margin: 10px 0;
  }
 
  .sticky .main-nav li a:link, .sticky .main-nav li a:visited {
@@ -274,20 +274,13 @@
  }
 
  .sticky {
-   /*Posição FIXA*/
    position: fixed;
-   /*Grudado no topo*/
    top: 0;
-   /*Grudado na esquerda*/
    left: 0;
-   /*Ocupando largura total do VH*/
    width: 100%;
-   /*Um pouquinho de transparência*/
    background-color: rgba(255, 255, 255, 0.95);
    box-shadow: 0 2px 2px #efefef;
-   /*Adicionar essa linha para efeito de sombra*/
    z-index: 9999;
-   /*Prioriedade máxima*/
  }
 
  .sticky+.content {
@@ -658,9 +651,4 @@
    cursor: pointer;
    /*Não mostra o conteúdo html deste seletor*/
    display: none;
- }
-
- .mobile-nav-icon i {
-   font-size: 200%;
-   color: #fff;
  }

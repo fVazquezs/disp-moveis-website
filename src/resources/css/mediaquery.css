@@ -1,16 +1,26 @@
+@media only screen and (min-width: 767px) {
+    .sticky {
+        height: 70px;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     html {
         font-size: 16px !important;
     }
     .logo {
         height: 70px !important;
-        margin-top: 30px !important;
+        margin-top: 5px !important;
     }
     .mobile-nav-icon {
         display: inline-block !important;
         font-size: 200% !important;
         color: #ffffff !important;
         margin-right: 30px !important;
+        margin-top: 5px !important;
+    }
+    .sticky .mobile-nav-icon{
+        color: #555 !important;
     }
     .main-nav {
         float: left !important;
@@ -45,13 +55,24 @@
     }
 }
 
-@media only screen and (max-width: 1100px){
-    .main-nav{
+@media only screen and (max-width: 1100px) {
+    .main-nav {
         float: left !important;
+        margin-left: 240px !important;
     }
 }
 
 @media only screen and (max-width: 1000px) {
+    .sticky .logo {
+        margin-left: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-nav {
+        float: left !important;
+        margin-left: 140px !important;
+    }
     .hero-text-box {
         width: 800px !important;
         margin-left: 10px;
@@ -68,6 +89,10 @@
 }
 
 @media only screen and (max-width: 970px) {
+    .main-nav {
+        float: left !important;
+        margin-left: 70px !important;
+    }
     .types {
         grid-template-columns: 100% !important;
         margin-right: 20px !important;
